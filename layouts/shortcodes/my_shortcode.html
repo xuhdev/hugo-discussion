@@ -1,0 +1,5 @@
+{{- with page.GetPage (.Get 0) -}}
+  {{ .Title }}
+{{- else -}}
+  {{ errorf "GetPage failed to get %s" (.Get 0) }}
+{{- end -}}
